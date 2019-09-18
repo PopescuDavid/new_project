@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                id
+            </th>
+            <th>
+                name
+            </th>
+            <th>
+                price
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in (ViewData["ItemList"] as List<ShopItem>))
+        {
+            <tr>
+                <td>
+                    @item.ID
+                </td>
+                <td>
+                    @item.Name
+                </td>
+                <td>
+                    @item.Price
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>                
